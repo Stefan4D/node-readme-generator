@@ -15,23 +15,35 @@ import inquirer from "inquirer";
 import path from "path";
 
 // array of questions for user
-const questions = [];
+const questions = [
+  /* Pass your questions in here */
+  {
+    type: "input",
+    name: "title",
+    message: "What is the title of your project?",
+    default: "New Project",
+  },
+];
 
 // function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+  // write the data to fileName
+}
 
 // function to initialize program
 function init() {
   inquirer
-    .prompt([
-      /* Pass your questions in here */
-    ])
+    .prompt(questions)
     .then((answers) => {
       // Use user feedback for... whatever!!
+      console.log(answers); // answers is an object
+      console.log(generateMarkdown(answers));
+      // writeToFile("README.md", answers);
     })
     .catch((error) => {
       if (error.isTtyError) {
         // Prompt couldn't be rendered in the current environment
+        // TTY = teletypewriter
       } else {
         // Something else went wrong
       }
