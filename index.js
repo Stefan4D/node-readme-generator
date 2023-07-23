@@ -1,7 +1,5 @@
 /*
-
     Imports
-
 */
 
 // changed the below to import statements with ESM
@@ -38,7 +36,7 @@ function init() {
       // Use user feedback for... whatever!!
       console.log(answers); // answers is an object
       console.log(generateMarkdown(answers));
-      // writeToFile("README.md", answers);
+      // writeToFile("README.md", generateMarkdown(answers));
     })
     .catch((error) => {
       if (error.isTtyError) {
