@@ -72,33 +72,17 @@ const questions = [
       "Please provide the email address people can reach you at for questions",
     // default: "",
   },
-
-  // Sections:
-  // Description
-  // Table of Contents - auto generate?
-  // Installation
-  // Usage
-  // License - pick from choices array
-  // Contributing
-  // Tests
-  // Questions
-
-  //   When a user enters the project title, it's displayed as the title of the README.
-
-  // When a user enters a description, installation instructions, usage information, contribution guidelines, and test instructions, this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests.
-
-  // When a user chooses a license for their application from a list of options, a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under.
-
-  // When a user enters their GitHub username, it's added to the section of the README entitled Questions, with a link to their GitHub profile.
-
-  // When a user enters their email address, it's added to the section of the README entitled Questions, with instructions on how to reach them with additional questions.
-
-  // When a user clicks on the links in the Table of Contents, they are taken to the corresponding section of the README.
 ];
 
 // function to write README file
 function writeToFile(fileName, data) {
   // write the data to fileName
+  try {
+    fs.writeFileSync(fileName, data);
+    // file written successfully
+  } catch (err) {
+    console.error(err);
+  }
 }
 
 // function to initialize program
@@ -107,9 +91,14 @@ function init() {
     .prompt(questions)
     .then((answers) => {
       // Use user feedback for... whatever!!
-      console.log(answers); // answers is an object
-      console.log(generateMarkdown(answers));
-      // writeToFile("README.md", generateMarkdown(answers));
+      // console.log(answers); // answers is an object
+      // console.log(generateMarkdown(answers));
+      writeToFile(
+        `./output/${answers.title
+          .replace(/\s+/g, "-")
+          .toLowerCase()}-README.md`,
+        generateMarkdown(answers)
+      );
     })
     .catch((error) => {
       if (error.isTtyError) {

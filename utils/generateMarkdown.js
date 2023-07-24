@@ -1,26 +1,37 @@
 // function to generate markdown for README
 // ? Use handlebars or mustache to generate templated markdown
 function generateMarkdown(data) {
-  //   When a user enters the project title, it's displayed as the title of the README.
-
-  // When a user enters a description, installation instructions, usage information, contribution guidelines, and test instructions, this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests.
-
   // When a user chooses a license for their application from a list of options, a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under.
-
-  // When a user enters their GitHub username, it's added to the section of the README entitled Questions, with a link to their GitHub profile.
-
-  // When a user enters their email address, it's added to the section of the README entitled Questions, with instructions on how to reach them with additional questions.
-
-  // When a user clicks on the links in the Table of Contents, they are taken to the corresponding section of the README.
   return `# ${data.title}
+  ## Description
   ${data.description}
+
+  ## Table of Contents
+  - [Description](#description)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [License](#license)
+  - [Contributing](#contributing)
+  - [Tests](#tests)
+  - [Questions](#questions)
+
+  ## Installation
   ${data.installation}
+
+  ## Usage
   ${data.usage}
-  ${data.contributing}
-  ${data.testing}
+
+  ## License
   ${data.license}
-  ${data.githubUsername}
-  ${data.email}
+
+  ## Contributing
+  ${data.contributing}
+
+  ## Tests
+  ${data.testing}
+
+  ## Questions
+  For any questions on this repo, you can reach the maintainer on [GitHub](https://github.com/${data.githubUsername}) or via email at ${data.email}.
 `;
 }
 
