@@ -12,6 +12,15 @@ import fs from "fs";
 import inquirer from "inquirer";
 import path from "path";
 
+const licenses = [
+  "MIT",
+  "GPL v3",
+  "CC0 1.0",
+  "Apache 2.0",
+  "BSD 3.0",
+  "MPL 2.0",
+];
+
 // array of questions for user
 const questions = [
   /* Pass your questions in here */
@@ -56,7 +65,7 @@ const questions = [
     name: "license",
     message:
       "Which license agreement are you making this project available under?",
-    choices: ["MIT", "GPL", "AGPL", "Apache", "BSD"],
+    choices: licenses.sort(),
     default: "MIT",
   },
   {
@@ -104,7 +113,11 @@ function init() {
       if (error.isTtyError) {
         // Prompt couldn't be rendered in the current environment
         // TTY = teletypewriter
+        console.error(
+          "Wrong execution environment. Please use Node or similar."
+        );
       } else {
+        console.error(error);
         // Something else went wrong
       }
     });
