@@ -52,6 +52,38 @@ Run `npm install` or `npm i` to install the dependencies.
 
 ## Mark Scheme Compliance
 
+### Deliverables
+
+| Item                                                               | Evidence                                                               |
+| ------------------------------------------------------------------ | ---------------------------------------------------------------------- |
+| A sample README generated using the application must be submitted. | Sample README files are included in the output folder                  |
+| Your GitHub repository containing your application code.           | This repo contains all code. Use `npm install` to install dependencies |
+
+### Walkthrough Video
+
+| Item                                                                                                                                                               | Evidence                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------- |
+| A walkthrough video that demonstrates the functionality of the README generator must be submitted, and a link to the video should be included in your README file. | Walkthrough video link included in this README and in submission.                  |
+| The walkthrough video must demonstrate how a user would invoke the application from the command line.                                                              | Video demonstrates how to invoke the application from the command line using Node. |
+| The walkthrough video must demonstrate how a user would enter responses to all of the prompts in the application.                                                  | Video demonstrates the user interface and prompts.                                 |
+| The walkthrough video must demonstrate a generated README that matches the user input and has a functioning table of contents.                                     | Video demonstrates the README generated and the functioning table of contents.     |
+
+### Technical Acceptance Criteria
+
+| Item                                                                          | Evidence                                                                                  |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| Satisfies all of the above acceptance criteria and uses the Inquirer package. | Application satisfies the acceptance criteria and uses the latest Inquirer package (ESM). |
+
+### Repository Quality
+
+| Item                                                                                                   | Evidence                                                                                                                                                                                                                  |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Repository has a unique name.                                                                          | Unique name used                                                                                                                                                                                                          |
+| Repository follows best practices for file structure and naming conventions.                           | Standard file naming conventions used                                                                                                                                                                                     |
+| Repository follows best practices for class/id naming conventions, indentation, quality comments, etc. | All multi-word variables in JavaScript use camelCase<br /><br /> Indentation within code follows best practice <br /><br /> Comments have been included within the files to describe behaviour and/or intent of the code. |
+| Repository contains multiple descriptive commit messages.                                              | Multiple commits included demonstrating incremental build of final submission. Each has a clear description of changes made.                                                                                              |
+| Repository contains a high-quality README with description and a link to walkthrough video.            | This README document. Walkthrough video is available [here](https://www.youtube.com/watch?v=0DOTfE0635E).                                                                                                                 |
+
 ## License
 
 Released under the MIT license. Full details in [LICENSE](./LICENSE).
