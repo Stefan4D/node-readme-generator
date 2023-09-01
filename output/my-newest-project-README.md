@@ -1,8 +1,8 @@
 # My Newest Project
-  [![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
+  [![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
   ## Description
-  This is my new project
+  This is a new project that I am creating
 
   ## Table of Contents
   - [Description](#description)
@@ -17,16 +17,16 @@
   Run npm install to install the dependencies.
 
   ## Usage
-  You can include this code in your project and...
+  Run it to discover great things
 
   ## License
-  CC0 1.0
+  BSD 3.0
 
   ## Contributing
-  To contribute to this project, please...
+  Please use branches
 
   ## Tests
-  No tests are included
+  Use npm test
 
   ## Questions
-  For any questions on this repo, you can reach the maintainer on [GitHub](https://github.com/Stefan4D) or via email at my@email.com.
+  For any questions on this repo, you can reach the maintainer on [GitHub](https://github.com/Stefan4D) or via email at fake@gmail.com.
